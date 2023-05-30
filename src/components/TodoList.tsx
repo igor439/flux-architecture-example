@@ -43,7 +43,7 @@ export default function TodoList() {
     {
 
         
-        if (todoText != '') {
+        if (todoText !== '') {
 
             indexArray = indexArray + 1;
 
@@ -62,35 +62,27 @@ export default function TodoList() {
 
     }
 
-        
-
-        
-    
-
-    
-
-
-   
-
-
-
-
   return (
-    <div>
-        <div>
-            <ul>{todoList.map(todoList=>(
-            <li id={todoList.id.toString()}>
-                <TodoItem itemName ={todoList.todoText}/>
-            </li>))}
-            
-            </ul>
-
-        </div>
-
-        <div>
+    <>{/*tirei a div aqui tbm pq nao precisava*/}
+        
+    {/*aqui eu so troquei de possição o input das tesks*/}
+        <div className='input'>
             <input value={todoText} onChange={e => setTodo(e.target.value)}></input>
+            <span className="highlight"></span>
+            <span className="bar"></span>
+            <label>Tasks</label>
         <button onClick={addTodo}>add new</button>
         </div>
-    </div>
+        <div className='tasks'>
+            {/*tirei o ul e a li pq nao precisava*/}
+            {todoList.map(todoList=>(
+            <div className='task' id={todoList.id.toString()}>
+                <TodoItem itemName ={todoList.todoText}/>
+            </div>))}
+            
+            
+
+        </div>
+    </>
   )
 }

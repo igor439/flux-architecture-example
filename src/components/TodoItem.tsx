@@ -8,11 +8,11 @@ interface TodoItemProps{
 
 export default function TodoItem(props : TodoItemProps) {
   return (
-    <div>
-      <div>
+    <>{/*tirei essa tbm div q tava aqui envolta de tudo*/}  
+    {/*tirei a div q tava aqui envolta*/}  
       {props.itemName}
       <input type='checkbox' value={'DONE'}></input>
-      </div>
-    </div>
+      
+    </>
   )
 }

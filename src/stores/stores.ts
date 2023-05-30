@@ -8,10 +8,6 @@ export interface stores{
     unregister(callBack: ()=>void): void;
     getState(): any;
     handleAction(action:Action): void;
-    
-
-
-
 
 }
 

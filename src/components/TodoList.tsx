@@ -63,9 +63,7 @@ export default function TodoList() {
     }
 
   return (
-    <>{/*tirei a div aqui tbm pq nao precisava*/}
-        
-    {/*aqui eu so troquei de possição o input das tesks*/}
+    <>
         <div className='input'>
             <input value={todoText} onChange={e => setTodo(e.target.value)}></input>
             <span className="highlight"></span>

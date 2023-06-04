@@ -15,7 +15,8 @@ O desing pattern Observer é ultilizado quando um ou mais objetos na sua aplica�
 
 Para implementarmos esse padrão, teremos duas interfaces; **Subject** e **Observer**. O objeto que contém a a variável ou estado que precisa ser obsevado por outras partes da aplicação implementa a interface Subject. Essa inteface solicita a implemtação de três metodos. **Attach,Detach e Notify**. Os objetos ou partes da sua aplicação que precisam saber das mudanças no subject implementam a interface observer e são passados para o subject com o metodo **Attach** que via polimorfismo guarda a implementação da inteface observer feita pelo objeto que precisa estar ciente da mudaças. A inteface observer exige apenas a impelentação de apenas um metodo, **Update**. Em outras palavras o subject tera um array de callbacks **Update** e vai chamar todos eles assim que os dados observados mudarem passando como argumento em **Update** o conjunto de dados modificado. Assim todos os objetos registrados atualizam seus dados. Observe o diagrama:
 
-![alt text](images\structureObserver.jpg)
+![alt text](https://github.com/igor439/flux-architecture-example/blob/main/images/structureObserver.jpg)
+
 (*Desculpem a qualidade não tive tempo de fazer o diagrama digitalemente por isso tirei foto do meu livro*)
 
 Caso queiram saber mais, sugiro que pesquisem a parte ou nós podemos marcar um dia para implementarmos juntos de maneira mais didática. O ponto chave aqui é entender que o design pattern Observe nos dá mais que uma maneira de atualizar dados, mas também uma maneira de pensar a comunicação dos elementos da nosssa aplicação. Apeguem-se a isso!!
@@ -24,7 +25,7 @@ Caso queiram saber mais, sugiro que pesquisem a parte ou nós podemos marcar um 
 
 Em uma aplicação com GUI, é comum pensarmos o software em três camadas principais, a UI, lógicas internas e requisições e a resposta a essas requisições(Também conhecido como Back-end). O fluxo de dados entre essas três camadas deve ser a mais fuída possível. A flux assim como tantas outras arquiteturas tratam de organizar esse fluxo. Agora vamos ver como cada componente dito no começo se encaixam e se comunicam. Oberve o diagrama.
 
-![alt text](images\fluxgraph.PNG)
+![images\fluxgraph.PNG](https://github.com/igor439/flux-architecture-example/blob/main/images/fluxgraph.PNG))
 
 > View
 
